@@ -2,10 +2,10 @@ import React from "react"
 
 export default function AboutMe() {
     return (
-        <div className="bg-LIGHT h-[95vh] w-full">
+        <div className="bg-LIGHT md:h-[95vh] h-[200vh] w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
-                <div className="flex flex-row mt-5 pb-2 rounded">
-                    <div className="w-[50%] h-[50%] mt-auto mb-auto flex flex-col items-center">
+                <div className="flex md:flex-row flex-col mt-5 pb-2 rounded">
+                    <div className="w-full md:w-[50%] h-[50%] mt-auto mb-auto flex md:flex-row flex-col items-center">
                         <h1 className="flex m-auto w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem]">
                             About me
                         </h1>     
@@ -13,19 +13,19 @@ export default function AboutMe() {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus temporibus vero repudiandae voluptate odit consequuntur sequi, tenetur nemo autem fugiat, quibusdam necessitatibus recusandae in natus vitae commodi qui ex!    
                         </p>                       
                     </div>
-                    <div className="w-[50%]">
+                    <div className="md:w-[50%] w-full">
                         <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=sph"
                             alt="Profile Picture"
                             className="rounded-full ring shadow-lg"
                         />                        
                     </div>
                 </div>
-                <div>
                     <h1 className="flex m-auto mb-5 w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem] border-b">
                         My Experiences                        
-                    </h1>
-                    <ul className="flex flex-row w-full justify-evenly">
-                        <li className="shadow-lg h-full w-[30%] shadow-inner-lg">
+                    </h1>                
+                <div className=" h-full justify-between flex flex-col">
+                    <ul className="flex md:flex-row flex-col w-full justify-evenly">
+                        <li className="shadow-lg h-full w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Front-back end Design                                
                             </h1>
@@ -44,7 +44,7 @@ export default function AboutMe() {
                                 </li>
                             </ul>
                         </li>
-                        <li className="shadow-lg h-full w-[30%] shadow-inner-lg">
+                        <li className="shadow-lg h-full w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Collaboration and improvement
                             </h1>
@@ -63,7 +63,7 @@ export default function AboutMe() {
                                 </li>
                             </ul>
                         </li>
-                        <li className="shadow-lg h-full w-[30%] shadow-inner-lg">
+                        <li className="shadow-lg h-full w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Technology
                             </h1>
