@@ -1,21 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 
 export default function MobileNav() {
 
-  const location = useLocation();
-
+    const location = useLocation();
+    const [see, isSee] = useState(false)
+  
   return (
     <div className="w-[100vw] h-[5vh] flex flex-row justify-evenly w-full bg-DARK text-LIGHT text-center items-center">
-      <div className="w-[25%] font-serif md:text-[2rem] text-[0.8rem]">
+      <div className="w-[60%] font-serif md:text-[2rem] text-[0.8rem]">
         Thomas Moloney
       </div>
-      <ul className="w-[75%] h-full flex flex-row justify-evenly items-center text-center">
-        <NavItem to="/" currentPathname={location.pathname}>About Me</NavItem>
-        <NavItem to="/MyProjects" currentPathname={location.pathname}>My Projects</NavItem>
-        <NavItem to="/Contact" currentPathname={location.pathname}>Contact me</NavItem>
-      </ul>
+      <button>
+        <img onClick={() => isSee(!see)} className={`${see ? "bg-HIGHLIGHT rounded" : ""} w-[6vw] h-full`} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="Burger" />
+      </button>
+      {see && (
+        <ul className="right-0 top-[4.9vh] bg-DARK rounded divide-y fixed h-[60vh] flex flex-col justify-evenly ">
+            <NavItem to="/" currentPathname={location.pathname}> <button onClick={() => isSee(false)}>About Me</button></NavItem>
+            <NavItem to="/MyProjects" currentPathname={location.pathname}><button onClick={() => isSee(false)}>My Projects</button></NavItem>
+            <NavItem to="/Contact" currentPathname={location.pathname}><button onClick={() => isSee(false)}>Contact me</button></NavItem>
+        </ul>        
+      )}
+
     </div>
   );
 }

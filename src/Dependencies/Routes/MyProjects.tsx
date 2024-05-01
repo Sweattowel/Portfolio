@@ -3,16 +3,16 @@ import React from "react"
 export default function MyProjects()
 {
     return (
-        <div className="bg-LIGHT md:h-[95vh] h-full w-full">
+        <div className="bg-LIGHT  md:h-[95vh] h-[200vh] w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
-                <div className="w-[80%] h-[20vh] ml-[15%] flex flex-row">
+                <div className="w-[80%] h-[20%] ml-[15%] flex flex-row">
                     <h1 className="text-[2rem] text-HIGHLIGHT font-bold font-serif w-full md:w-[50%] h-full text-center justify-center flex items-center">
                         What im working on
                     </h1>
                 </div>
                 <div className="flex md:flex-row flex-col w-full h-full justify-evenly">
 
-                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] h-full mb-[5%] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             AlieSohn Pottery
                         </h1>
@@ -29,7 +29,7 @@ export default function MyProjects()
                             </button>
                     </div>
 
-                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] h-full mb-[5%] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             Spotify-Control
                         </h1>
@@ -46,7 +46,7 @@ export default function MyProjects()
                             </button>
                     </div>
                     
-                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] h-full mb-[5%] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             This very page
                         </h1>
@@ -64,12 +64,12 @@ export default function MyProjects()
                     </div>
                 </div>
 
-                <div className="justify-evenly flex md:flex-row flex-col w-full h-[100vh]">
-                    <div className="h-[50vh]">
+                <div className="justify-evenly flex md:flex-row flex-col w-full md:h-full h-full">
+                    <div className="h-full">
                         <h1 className="md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-full text-center justify-center flex items-center">
                             Technology used
                         </h1>
-                        <ul className="shadow-lg h-full w-full text-center justify-center flex flex-col items-center">
+                        <ul className="shadow-lg md:h-[50%] h-[35vh] w-full text-center justify-center flex flex-col items-center">
                             <li>
                                 HTML, CSS JS, TS and C#
                             </li>
@@ -87,11 +87,11 @@ export default function MyProjects()
                             </li>                        
                         </ul>                        
                     </div>
-                    <div className="h-[50vh]">
+                    <div className="h-full">
                         <h1 className="md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-full text-center justify-center flex items-center">
                             Considerations
                         </h1>
-                        <ul className="shadow-lg h-full w-full text-center justify-center flex flex-col items-center">
+                        <ul className="shadow-lg md:h-[50%] h-[35vh] w-full text-center justify-center flex flex-col items-center">
                             <li>
                                 Maintaining standards of OOP for clarity and ease of maintenance
                             </li>

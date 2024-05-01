@@ -20,7 +20,6 @@ root.render(
             :
             <MobileNav />          
           }
-     
           <Routes>
             <Route path='/' Component={AboutMe}/>      
             <Route path='/MyProjects' Component={MyProjects}/>      

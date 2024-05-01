@@ -5,15 +5,15 @@ export default function AboutMe() {
         <div className="bg-LIGHT md:h-[95vh] h-[200vh] w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
                 <div className="flex md:flex-row flex-col mt-5 pb-2 rounded">
-                    <div className="w-full md:w-[50%] h-[50%] mt-auto mb-auto flex md:flex-row flex-col items-center">
+                    <div className="w-full md:w-[50%] md:h-[50%] h-full mt-auto mb-auto flex flex-col items-center">
                         <h1 className="flex m-auto w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem]">
                             About me
                         </h1>     
-                        <p className="flex m-auto w-[80%] text-center">
+                        <p className="flex m-auto w-[80%] text-center md:mb-0 mb-10">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus temporibus vero repudiandae voluptate odit consequuntur sequi, tenetur nemo autem fugiat, quibusdam necessitatibus recusandae in natus vitae commodi qui ex!    
                         </p>                       
                     </div>
-                    <div className="md:w-[50%] w-full">
+                    <div className="md:w-[50%] w-[80%] flex justify-center m-auto">
                         <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=sph"
                             alt="Profile Picture"
                             className="rounded-full ring shadow-lg"
