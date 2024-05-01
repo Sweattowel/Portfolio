@@ -55,7 +55,7 @@ export default function MyProjects()
                                 Summary
                             </h2>
                             <p className="w-[90%] h-[15vh] h-[10vh] flex m-auto text-center border-b border-HIGHLIGHT">
-                                A Fresh portfolio Created and designed by yours truly with an emphasis on colour standards
+                                A Fresh portfolio Created and designed by yours truly with an emphasis on colour standards, style and up to date standards
                             </p>
                         </div>
                             <button className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
