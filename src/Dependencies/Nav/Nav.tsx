@@ -2,7 +2,8 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 
-export default function Nav() {
+export default function Nav()
+{
 
   const location = useLocation();
 
@@ -20,7 +21,8 @@ export default function Nav() {
   );
 }
 // Individual NavItems Assist in creating a nice user experience
-function NavItem({ to, children, currentPathname }: { to: string, children: React.ReactNode, currentPathname: string }) {
+function NavItem({ to, children, currentPathname }: { to: string, children: React.ReactNode, currentPathname: string })
+{
   const isActive = currentPathname === to;
 
   const linkClass = isActive ? "bg-HIGHLIGHT" : "";

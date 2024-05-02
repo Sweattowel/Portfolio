@@ -14,17 +14,17 @@ const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
     <Opener />
-        <Router>
-          {window.innerWidth > 768 ? 
-            <Nav />    
-            :
-            <MobileNav />          
-          }
-          <Routes>
-            <Route path='/' Component={AboutMe}/>      
-            <Route path='/MyProjects' Component={MyProjects}/>      
-            <Route path='/Contact' Component={Contact}/>      
-          </Routes>
-        </Router>
+    <Router>
+      {window.innerWidth > 768 ?
+        <Nav />
+        :
+        <MobileNav />
+      }
+      <Routes>
+        <Route path='/' Component={AboutMe} />
+        <Route path='/MyProjects' Component={MyProjects} />
+        <Route path='/Contact' Component={Contact} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );

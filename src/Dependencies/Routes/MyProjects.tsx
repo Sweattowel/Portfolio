@@ -5,8 +5,8 @@ export default function MyProjects()
     return (
         <div className="bg-LIGHT  md:h-[95vh] h-[200vh] w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
-                <div className="w-[80%] h-[20%] ml-[15%] flex flex-row">
-                    <h1 className="text-[2rem] text-HIGHLIGHT font-bold font-serif w-full md:w-[50%] h-full text-center justify-center flex items-center">
+                <div className="w-[80%] h-[20%] md:ml-[15%] m-auto flex flex-row">
+                    <h1 className="border-b-2 text-[2rem] text-HIGHLIGHT font-bold font-serif w-full md:w-[50%] h-full text-center justify-center flex items-center">
                         What im working on
                     </h1>
                 </div>
@@ -24,9 +24,9 @@ export default function MyProjects()
                                 AlieSohn Pottery is a collaborative E-Commerce Site which leverages React, tailwind and more to create a seamless first come first serve store experience
                             </p>
                         </div>
-                            <button className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
-                                View On Github
-                            </button>
+                        <button onClick={() => window.open("https://github.com/Sweattowel/AlieSohn-Pottery")} className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
+                            View On Github
+                        </button>
                     </div>
 
                     <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
@@ -41,11 +41,11 @@ export default function MyProjects()
                                 A Seamless API controller for Spotify to control the music in otherwise tense operations
                             </p>
                         </div>
-                            <button className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
-                                View On Github
-                            </button>
+                        <button onClick={() => window.open("https://github.com/Sweattowel/Python_spotify_control")} className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
+                            View On Github
+                        </button>
                     </div>
-                    
+
                     <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             This very page
@@ -55,21 +55,23 @@ export default function MyProjects()
                                 Summary
                             </h2>
                             <p className="w-[90%] h-[15vh] h-[10vh] flex m-auto text-center border-b border-HIGHLIGHT">
-                                A Fresh portfolio Created and designed by yours truly with an emphasis on colour standards, style and up to date standards
+                                A Fresh portfolio Created and designed by yours truly with an emphasis on colour standards, style and up to date standards.
+                                <br />
+                                Hosted on Vercel.
                             </p>
                         </div>
-                            <button className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
-                                View On Github
-                            </button>
+                        <button onClick={() => window.open("https://github.com/Sweattowel/Portfolio")} className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
+                            View On Github
+                        </button>
                     </div>
                 </div>
 
                 <div className="justify-evenly flex md:flex-row flex-col w-full md:h-full h-full">
-                    <div className="h-full">
-                        <h1 className="md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-full text-center justify-center flex items-center">
+                    <div className="m-auto h-[80%] shadow-lg">
+                        <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-[80%] m-auto text-center justify-center flex items-center">
                             Technology used
                         </h1>
-                        <ul className="shadow-lg md:h-[50%] h-[35vh] w-full text-center justify-center flex flex-col items-center">
+                        <ul className="md:h-[80%] h-[35vh] w-[80%] m-auto text-center justify-center flex flex-col items-center">
                             <li>
                                 HTML, CSS JS, TS and C#
                             </li>
@@ -84,14 +86,14 @@ export default function MyProjects()
                             </li>
                             <li>
                                 Bcrypt, Multer, Dotnet, Node.JS, JWT, Cors and ENV
-                            </li>                        
-                        </ul>                        
+                            </li>
+                        </ul>
                     </div>
-                    <div className="h-full">
-                        <h1 className="md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-full text-center justify-center flex items-center">
+                    <div className="m-auto h-[80%] shadow-lg">
+                        <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-[80%] m-auto text-center justify-center flex items-center">
                             Considerations
                         </h1>
-                        <ul className="shadow-lg md:h-[50%] h-[35vh] w-full text-center justify-center flex flex-col items-center">
+                        <ul className="md:h-[80%] h-[35vh] w-[80%] m-auto text-center justify-center flex flex-col items-center">
                             <li>
                                 Maintaining standards of OOP for clarity and ease of maintenance
                             </li>
@@ -106,8 +108,8 @@ export default function MyProjects()
                             </li>
                             <li>
                                 Encryption of userDetails as well as defining LOA for users
-                            </li>                        
-                        </ul>                        
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

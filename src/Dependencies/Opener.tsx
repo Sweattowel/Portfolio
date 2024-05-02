@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-export default function Opener() {
+export default function Opener()
+{
   const [see, setSee] = useState(true);
 
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
+  useEffect(() =>
+  {
+    const timeoutId = setTimeout(() =>
+    {
       setSee(false);
     }, 2000);
 

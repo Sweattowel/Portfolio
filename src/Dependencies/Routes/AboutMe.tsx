@@ -1,6 +1,7 @@
 import React from "react"
 
-export default function AboutMe() {
+export default function AboutMe()
+{
     return (
         <div className="bg-LIGHT md:h-[95vh] h-[200vh] w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
@@ -8,26 +9,26 @@ export default function AboutMe() {
                     <div className="w-full md:w-[50%] md:h-[50%] h-full mt-auto mb-auto flex flex-col items-center">
                         <h1 className="flex m-auto w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem]">
                             About me
-                        </h1>     
+                        </h1>
                         <p className="flex m-auto w-[80%] text-center md:mb-0 mb-10">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus temporibus vero repudiandae voluptate odit consequuntur sequi, tenetur nemo autem fugiat, quibusdam necessitatibus recusandae in natus vitae commodi qui ex!    
-                        </p>                       
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus temporibus vero repudiandae voluptate odit consequuntur sequi, tenetur nemo autem fugiat, quibusdam necessitatibus recusandae in natus vitae commodi qui ex!
+                        </p>
                     </div>
                     <div className="md:w-[50%] w-[80%] flex justify-center m-auto">
                         <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=sph"
                             alt="Profile Picture"
                             className="rounded-full ring shadow-lg"
-                        />                        
+                        />
                     </div>
                 </div>
-                    <h1 className="flex m-auto mb-5 w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem] border-b">
-                        My Experiences                        
-                    </h1>                
+                <h1 className="flex m-auto mb-5 w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem] border-b">
+                    My Experiences
+                </h1>
                 <div className=" h-full justify-between flex flex-col">
                     <ul className="flex md:flex-row flex-col w-full justify-evenly">
                         <li className="shadow-lg h-full w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
-                                Front-back end Design                                
+                                Front-back end Design
                             </h1>
                             <ul className="flex flex-col h-[25vh] text-center justify-evenly">
                                 <li>
@@ -53,7 +54,7 @@ export default function AboutMe() {
                                     Open to criticism and feedback
                                 </li>
                                 <li>
-                                    Discussion and open Collaboration with developers and clientelle 
+                                    Discussion and open Collaboration with developers and clientelle
                                 </li>
                                 <li>
                                     Learning fresh Technology
@@ -78,7 +79,7 @@ export default function AboutMe() {
                                     Practiced knowledge of CSS styling using Tailwind CSS
                                 </li>
                                 <li>
-                                    Experienced with CyberSecurity standards such as Sanitizing, Encryption and LOA 
+                                    Experienced with CyberSecurity standards such as Sanitizing, Encryption and LOA
                                 </li>
                             </ul>
                         </li>

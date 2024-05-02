@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function Contact(){
+export default function Contact()
+{
     return (
         <div className="bg-LIGHT h-[95vh] w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
@@ -12,14 +13,14 @@ export default function Contact(){
                         You Can find me at:
                     </p>
                     <div className="border-b border-HIGHLIGHT text-[2rem] text-[1rem] w-[60%] text-center">
-                        LinkedIn: 
+                        LinkedIn:
                     </div>
-                        <a className="hover:text-HIGHLIGHT hover:ring-HIGHLIGHT" href="https://www.linkedin.com/in/thomas-moloney-538204294/"> &gt; Thomas Moloney &lt; </a>
+                    <a className="hover:text-HIGHLIGHT hover:ring-HIGHLIGHT" href="https://www.linkedin.com/in/thomas-moloney-538204294/"> &gt; Thomas Moloney &lt; </a>
                     <div className="border-b border-HIGHLIGHT text-[2rem] w-[60%] text-center">
                         My Github:
-                    </div>    
-                        <a className="hover:text-HIGHLIGHT hover:ring-HIGHLIGHT" href="https://github.com/Sweattowel"> &gt; Sweattowel &lt; </a>
-       
+                    </div>
+                    <a className="hover:text-HIGHLIGHT hover:ring-HIGHLIGHT" href="https://github.com/Sweattowel"> &gt; Sweattowel &lt; </a>
+
                 </div>
 
             </div>
