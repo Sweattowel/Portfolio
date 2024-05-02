@@ -24,13 +24,13 @@ export default function AboutMe()
                 <h1 className="flex m-auto mb-5 w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem] border-b">
                     My Experiences
                 </h1>
-                <div className=" h-full justify-between flex flex-col">
-                    <ul className="flex md:flex-row flex-col w-full justify-evenly">
-                        <li className="shadow-lg h-full w-full md:w-[30%] shadow-inner-lg">
+                <div className=" h-full justify-evenly flex flex-col">
+                    <ul className="flex md:flex-row flex-col w-full h-full justify-evenly">
+                        <li className="shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Front-back end Design
                             </h1>
-                            <ul className="flex flex-col h-[25vh] text-center justify-evenly">
+                            <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
                                 <li>
                                     React.JS Front end pages
                                 </li>
@@ -45,11 +45,11 @@ export default function AboutMe()
                                 </li>
                             </ul>
                         </li>
-                        <li className="shadow-lg h-full w-full md:w-[30%] shadow-inner-lg">
+                        <li className="shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Collaboration and improvement
                             </h1>
-                            <ul className="flex flex-col h-[25vh] text-center justify-evenly">
+                            <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
                                 <li>
                                     Open to criticism and feedback
                                 </li>
@@ -64,11 +64,11 @@ export default function AboutMe()
                                 </li>
                             </ul>
                         </li>
-                        <li className="shadow-lg h-full w-full md:w-[30%] shadow-inner-lg">
+                        <li className="shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Technology
                             </h1>
-                            <ul className="flex flex-col h-[25vh] text-center justify-evenly">
+                            <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
                                 <li>
                                     Strong Basis in HTML, CSS and JS/TS
                                 </li>

@@ -66,7 +66,7 @@ export default function MyProjects()
                     </div>
                 </div>
 
-                <div className="justify-evenly flex md:flex-row flex-col w-full md:h-full h-full">
+                <div className="justify-evenly flex md:flex-row flex-col w-full h-full">
                     <div className="m-auto h-[80%] shadow-lg">
                         <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-[80%] m-auto text-center justify-center flex items-center">
                             Technology used
