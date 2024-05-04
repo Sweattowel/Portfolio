@@ -17,7 +17,7 @@ export default function MobileNav()
         <img onClick={() => isSee(!see)} className={`${see ? "bg-HIGHLIGHT rounded rotate-90 duration-9999" : ""} w-[6vw] h-full`} src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="Burger" />
       </button>
       {see && (
-        <ul className="right-0 top-[4.9vh] bg-DARK rounded divide-y fixed h-[60vh] flex flex-col justify-evenly ">
+        <ul className="z-40 right-0 top-[4.9vh] bg-DARK rounded divide-y fixed h-[60vh] flex flex-col justify-evenly ">
           <NavItem to="/" currentPathname={location.pathname}> <button className="h-[20vh]" onClick={() => isSee(false)}>About Me</button></NavItem>
           <NavItem to="/MyProjects" currentPathname={location.pathname}><button className="h-[20vh]" onClick={() => isSee(false)}>My Projects</button></NavItem>
           <NavItem to="/Contact" currentPathname={location.pathname}><button className="h-[20vh]" onClick={() => isSee(false)}>Contact me</button></NavItem>
@@ -37,7 +37,7 @@ function NavItem({ to, children, currentPathname }: { to: string, children: Reac
   return (
     <li className={`hover:bg-HIGHLIGHT pl-2 pr-2 h-full flex text-center justify-center items-center rounded ${linkClass}`}>
       <Link to={to}>
-        <button>{children}</button>
+        <div>{children}</div>
       </Link>
     </li>
   );

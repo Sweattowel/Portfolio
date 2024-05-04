@@ -23,7 +23,18 @@ export default function AboutMe()
         title: 'Default',
         url: "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1714003200&semt=sph", 
     })
-
+    const skillImages = [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7uwLyomLuj-z2wdukzRfaViu2o_urpD0h8eOGOdtcLQ&s",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7uwLyomLuj-z2wdukzRfaViu2o_urpD0h8eOGOdtcLQ&s",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png",
+        "https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png",
+    ]
     const NASAADDRESS = process.env.REACT_APP_NASA_API_KEY;
     class handleImage
     {
@@ -64,7 +75,12 @@ export default function AboutMe()
 
     return (
         <div className="bg-LIGHT md:h-full w-full">
-            <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
+                <div className="fixed h-[500vh] w-full mt-[50vh] ml-[10%] flex flex-col z-1">
+                    {skillImages.map((image: string, index: number) => (
+                        <img key={index} className="z-1 animate-moveDown fixed w-[6%] top-0 mt-[-5vh]" src={image} alt="Skill" style={{ animationDelay: `${index * -1}s` }}/>
+                    ))}
+                </div>
+            <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg z-0">
                 <div className="flex flex-col mt-5 pb-2 rounded ">
                     <div className="w-full md:w-[50%] md:h-[50%] h-full m-auto flex flex-col items-center mb-5">
                         <h1 className="flex m-auto w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem]">
@@ -74,19 +90,19 @@ export default function AboutMe()
                         An intermediate Web Developer with experience and skills that are reflected in my use of the following; React, JS, TS, C#, Use of libraries such as Tailwind and framer-motion, Front and Back-end design with SQL Database integration, Stakeholder communications, API Writing, Ubuntu Linux DB Hosting and more according to my persistent personal development.
                         </p>
                     </div>
-                    <div className="md:w-[80%] w-[90%] flex justify-center m-auto">
+                    <div className="md:w-[80%] w-[90%] flex justify-center m-auto z-0">
                         <img src={`${imageData.url}`}
                             alt={`${imageData.title}`}
                             className="rounded-lg shadow-lg"
                         />
                     </div>
                 </div>
-                <h1 className="flex m-auto mb-5 w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem] border-b">
+                <h1 className="z-0 flex m-auto mb-5 w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem] border-b">
                     My Experiences
                 </h1>
-                <div className=" md:h-[50vh] h-[100vh] justify-evenly flex flex-col">
+                <div className="z-0 md:h-[50vh] h-[100vh] justify-evenly flex flex-col">
                     <ul className="flex md:flex-row flex-col w-full h-full justify-evenly">
-                        <li className="shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
+                        <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg bg-WHITE">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Front-back end Design
                             </h1>
@@ -108,7 +124,7 @@ export default function AboutMe()
                                 </li>
                             </ul>
                         </li>
-                        <li className="shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
+                        <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Collaboration and improvement
                             </h1>
@@ -127,7 +143,7 @@ export default function AboutMe()
                                 </li>
                             </ul>
                         </li>
-                        <li className="shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
+                        <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
                             <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
                                 Technology
                             </h1>
@@ -151,9 +167,4 @@ export default function AboutMe()
             </div>
         </ div>
     )
-}
-
-function get(arg0: string)
-{
-    throw new Error("Function not implemented.")
 }

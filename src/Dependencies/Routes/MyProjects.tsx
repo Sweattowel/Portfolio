@@ -3,16 +3,16 @@ import React from "react"
 export default function MyProjects()
 {
     return (
-        <div className="bg-LIGHT  md:h-[95vh] h-[200vh] w-full">
+        <div className="bg-LIGHT  h-full w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
                 <div className="w-[80%] h-[20%] md:ml-[15%] m-auto flex flex-row">
-                    <h1 className="border-b-2 text-[2rem] text-HIGHLIGHT font-bold font-serif w-full md:w-[50%] h-full text-center justify-center flex items-center">
+                    <h1 className="border-b-2 text-[2rem] text-HIGHLIGHT font-bold font-serif w-full md:w-[50%] h-[10vh] text-center justify-center flex items-center">
                         What im working on
                     </h1>
                 </div>
                 <div className="flex md:flex-row flex-col w-full h-full justify-evenly">
 
-                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             AlieSohn Pottery
                         </h1>
@@ -29,7 +29,7 @@ export default function MyProjects()
                         </button>
                     </div>
 
-                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             Spotify-Control
                         </h1>
@@ -46,7 +46,7 @@ export default function MyProjects()
                         </button>
                     </div>
 
-                    <div className="shadow-lg md:w-[30%] w-full md:h-[80%] md:h-full h-[35vh] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             This very page
                         </h1>
@@ -66,12 +66,12 @@ export default function MyProjects()
                     </div>
                 </div>
 
-                <div className="justify-evenly flex md:flex-row flex-col w-full h-full">
-                    <div className="m-auto h-[80%] shadow-lg">
-                        <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-[80%] m-auto text-center justify-center flex items-center">
+                <div className="flex md:flex-row flex-col w-[90%] md:h-[60vh] h-[100vh] m-auto">
+                    <div className="m-auto h-[45vh] shadow-lg">
+                        <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif h-[10%] w-[80%] m-auto text-center justify-center flex items-center">
                             Technology used
                         </h1>
-                        <ul className="md:h-[80%] h-[35vh] w-[80%] m-auto text-center justify-center flex flex-col items-center">
+                        <ul className="md:h-[90%] h-[90%] w-[80%] m-auto text-center justify-center flex flex-col items-center">
                             <li>
                                 HTML, CSS JS, TS and C#
                             </li>
@@ -89,7 +89,7 @@ export default function MyProjects()
                             </li>
                         </ul>
                     </div>
-                    <div className="m-auto h-[80%] shadow-lg">
+                    <div className="m-auto h-[45vh] shadow-lg">
                         <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-[80%] m-auto text-center justify-center flex items-center">
                             Considerations
                         </h1>
