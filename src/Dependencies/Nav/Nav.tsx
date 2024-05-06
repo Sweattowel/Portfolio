@@ -6,7 +6,7 @@ export default function Nav() {
   const location = useLocation();
 
   return (
-    <div className="z-10 w-[100vw] h-[5vh] flex flex-row justify-evenly w-full bg-DARK text-LIGHT text-center items-center">
+    <div className="z-10 w-[100vw] h-[5vh] flex flex-row justify-evenly w-full bg-gradient-to-b from-BLACK via-DARK to-BLACK text-LIGHT text-center items-center">
       <div className="w-[25%] font-serif md:text-[2rem] text-[0.8rem]">
         Thomas Moloney
       </div>

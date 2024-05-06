@@ -8,7 +8,7 @@ export default function Contact()
                 <h1 className="text-HIGHLIGHT text-[1.5rem] md:text-[3rem] font-bold font-serif w-full h-[10vh] items-center flex justify-center">
                     CONTACT ME
                 </h1>
-                <div className="bg-DARK w-[80%] h-[80%] text-LIGHT flex flex-col ml-auto mr-auto justify-evenly items-center rounded ring ring-HIGHLIGHT">
+                <div className="bg-gradient-to-b from-BLACK via-DARK to-BLACK w-[80%] h-[80%] text-LIGHT flex flex-col ml-auto mr-auto justify-evenly items-center rounded ring ring-HIGHLIGHT">
                     <p className="text-LIGHT md:text-[2.5rem] text-[1.5rem] text-center w-full rounded mb-10">
                         You Can find me at:
                     </p>

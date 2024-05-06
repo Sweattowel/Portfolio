@@ -12,7 +12,7 @@ export default function MyProjects()
                 </div>
                 <div className="flex md:flex-row flex-col w-full h-full justify-evenly">
 
-                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col hover:scale-110 hover:shadow-2xl duration-500">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             AlieSohn Pottery
                         </h1>
@@ -29,7 +29,7 @@ export default function MyProjects()
                         </button>
                     </div>
 
-                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col hover:scale-110 hover:shadow-2xl duration-500">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             Spotify-Control
                         </h1>
@@ -46,7 +46,7 @@ export default function MyProjects()
                         </button>
                     </div>
 
-                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col">
+                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col hover:scale-110 hover:shadow-2xl duration-500">
                         <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
                             This very page
                         </h1>
@@ -67,7 +67,7 @@ export default function MyProjects()
                 </div>
 
                 <div className="flex md:flex-row flex-col w-[90%] md:h-[60vh] h-[100vh] m-auto">
-                    <div className="m-auto h-[45vh] shadow-lg">
+                    <div className="m-auto h-[45vh] shadow-lg hover:scale-110 hover:shadow-2xl duration-500">
                         <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif h-[10%] w-[80%] m-auto text-center justify-center flex items-center">
                             Technology used
                         </h1>
@@ -89,7 +89,7 @@ export default function MyProjects()
                             </li>
                         </ul>
                     </div>
-                    <div className="m-auto h-[45vh] shadow-lg">
+                    <div className="m-auto h-[45vh] shadow-lg hover:scale-110 hover:shadow-2xl duration-500">
                         <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-[80%] m-auto text-center justify-center flex items-center">
                             Considerations
                         </h1>

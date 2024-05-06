@@ -112,16 +112,26 @@ export default function AboutMe()
                     <div className="md:w-[80%] w-[90%] flex justify-center m-auto z-0">
                         {imageData.url !== '' ? (
                             <div>
-                                <img src={`${imageData.url}`}
-                                    alt={`${imageData.title}`}
-                                    className="rounded-t-lg shadow-lg"
-                                />    
+                                {imageData.media_type == 'video' ? (
+                                    <iframe 
+                                        src={imageData.url} 
+                                        frameBorder="0"
+                                        className="rounded-t-lg shadow-lg w-full min-h-[50vh] min-w-[50vw]"
+                                        >
+                                        
+                                    </iframe>
+                                ) : (
+                                    <img src={`${imageData.url}`}
+                                        alt={`${imageData.title}`}
+                                        className="rounded-t-lg shadow-lg"
+                                    />                                        
+                                )}
                                 <div className=" divide-y rounded-b bg-DARK text-HIGHLIGHT">
                                     <p className="w-[80%] m-auto flex justify-center">
                                         {imageData.title} 
                                     </p>
                                     <p className="w-[80%] m-auto flex justify-center">
-                                        Photo provided by NASA retrieved via API request
+                                        {imageData.media_type} provided by NASA
                                     </p>
                                 </div>                               
                             </div>
@@ -138,7 +148,7 @@ export default function AboutMe()
                 <div className="z-0 md:h-[50vh] h-[100vh] justify-evenly flex flex-col">
                     <ul className="flex md:flex-row flex-col w-full h-full justify-evenly">
                         <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg bg-WHITE">
-                            <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
+                            <h1 className="bg-gradient-to-b from-BLACK via-DARK to-BLACK text-LIGHT rounded p-2 text-center">
                                 Front-back end Design
                             </h1>
                             <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
@@ -160,7 +170,7 @@ export default function AboutMe()
                             </ul>
                         </li>
                         <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
-                            <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
+                            <h1 className="bg-gradient-to-b from-BLACK via-DARK to-BLACK text-LIGHT rounded p-2 text-center">
                                 Collaboration and improvement
                             </h1>
                             <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
@@ -179,7 +189,7 @@ export default function AboutMe()
                             </ul>
                         </li>
                         <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
-                            <h1 className="bg-DARK text-LIGHT rounded p-2 text-center">
+                            <h1 className="bg-gradient-to-b from-BLACK via-DARK to-BLACK text-LIGHT rounded p-2 text-center">
                                 Technology
                             </h1>
                             <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
