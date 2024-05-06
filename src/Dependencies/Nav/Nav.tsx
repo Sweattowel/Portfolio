@@ -35,7 +35,7 @@ function NavItem({ to, children, currentPathname }: { to: string, children: Reac
   return (
     <li className={`hover:bg-HIGHLIGHT pl-2 pr-2 h-[80%] flex text-center justify-center items-center rounded ${linkClass}`}>
       <Link to={to}>
-        <button>{children}</button>
+        {children}
       </Link>
     </li>
   );

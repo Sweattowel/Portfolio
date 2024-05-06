@@ -13,19 +13,7 @@ module.exports = {
 			BLACK: "#000000",
 			WHITE: "#ffffff",
 
-			DARKo: "#000080",
-			HIGHLIGHTo: "#B3001B",
-			LIGHTo: "#D6E3F8",
-
-			DARKb: "#FC766AF0",
-			HIGHLIGHTb: "#BOB8B4FF",
-			LIGHTb: "#184A45FF",
-
-			DARKa: "#DB222A",
-			HIGHLIGHTa: "#00FFFF",
-			LIGHTa: "#DBCDC6",
-
-			DARK: "#1d3c45",
+			DARK: "#222222",
 			HIGHLIGHT: "#d2601a",
 			LIGHT: "#fff1e1",
 		},
@@ -34,6 +22,7 @@ module.exports = {
 				fade: 'fadeOut 10s ease-in-out forwards',
 				slider: 'slider 1s linear infinite forwards',
 				moveDown: 'moveDown 5s infinite linear',
+				moveRight: 'moveRight 5s infinite linear',
 			},
 
 			keyframes: {
@@ -42,13 +31,14 @@ module.exports = {
 					'10%': { opacity: 0.9 },
 					'20%': { opacity: 0.8 },
 					'30%': { opacity: 0.7 },
-					'40%': { opacity: 0.6 },
-					'50%': { opacity: 0.5 },
-					'60%': { opacity: 0.4 },
-					'70%': { opacity: 0.2 },
-					'80%': { opacity: 0.1 },
-					'90%': { opacity: 0 },
-					'100%': { opacity: 0, zIndex: -20 },
+					'40%': { opacity: 0.5 },
+					'50%': { opacity: 0.3 },
+					'60%': { opacity: 0.2 },
+					'70%': { opacity: 0.1 },
+					'80%': { opacity: 0, visibilty: 'hidden' },
+					'90%': { opacity: 0, visibilty: 'hidden' },
+					'100%': { opacity: 0, visibilty: 'hidden' },
+					'100%': { opacity: 0, visibilty: 'hidden', zIndex: -20 },
 				},
 				'slider': {
 					'0%': { background: 'linear-gradient(to right, #000 0%, #fff 2%, #000 2%)' },
@@ -77,8 +67,15 @@ module.exports = {
 					'100%': { background: 'linear-gradient(to right, #000 100%, #fff 100%, #000 100%)' },
 				},
 				moveDown: {
-					'0%': {transform: 'translateY(0)', opacity: 0},
-					'100%': { transform: 'translateY(100vh)', opacity: 1 },
+					'0%': {transform: 'translateY(0vh)', opacity: 0},
+					'8%': {transform: 'translateY(8vh)', opacity: 0},
+					'50%': {transform: 'translateY(50vh)', opacity: 1},
+					'100%': { transform: 'translateY(100vh)', opacity: 0 },
+				},
+				moveRight: {
+					'0%': {transform: 'translateX(0vw)', opacity: 0},
+					'50%': {transform: 'translateX(30vw)', opacity: 1},
+					'100%': { transform: 'translateX(60vw)', opacity: 0 },
 				}
 			}
 			
