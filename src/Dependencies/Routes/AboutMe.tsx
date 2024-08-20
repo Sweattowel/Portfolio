@@ -98,6 +98,7 @@ export default function AboutMe()
     }
     useEffect(() => {
         handleImage.getPictureOfTheDay();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
@@ -128,9 +129,10 @@ export default function AboutMe()
                     <div className="md:w-[80%] w-[90%] flex justify-center m-auto z-0">
                         {imageData.url !== '' ? (
                             <div>
-                                {imageData.media_type == 'video' ? (
+                                {imageData.media_type === 'video' ? (
                                     <iframe 
                                         src={imageData.url} 
+                                        title={imageData.title}
                                         frameBorder="0"
                                         className="rounded-t-lg shadow-lg w-full min-h-[50vh] min-w-[50vw]"
                                         >
