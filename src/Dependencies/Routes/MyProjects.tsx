@@ -1,92 +1,146 @@
 import React from "react"
 
+interface ProjectStruc{
+    projectName: string,
+    projectSummary: string,
+    projectGithubLink: string,
+    projectTechnologyUsed: string[]
+}
 export default function MyProjects()
 {
+    const projects: ProjectStruc[] = [
+        {
+            projectName: "AlieSohn Pottery",
+            projectSummary: "AlieSohn Pottery is a collaborative E-Commerce Site which leverages React, tailwind and more to create a seamless first come first serve store experience",
+            projectGithubLink: "https://github.com/Sweattowel/AlieSohn-Pottery",
+            projectTechnologyUsed: [
+                "React",
+                "tailwind CSS",
+                "Multer", 
+                "dotnet", 
+                "node.JS", 
+                "Bcrypt",
+                "JWT",
+                "Material UI", 
+                "Framer-motion", 
+                "Prettier",
+                "Twin server scripts with JS and C#",
+            ]
+        },
+        {
+            projectName: "JavaScript Connector",
+            projectSummary: "A designed data transmitter used to take in SQL data as JSON, transform that data with the editing of columns and specific sets before return or asssigning said data to a new location.",
+            projectGithubLink: "https://github.com/Sweattowel/connector",
+            projectTechnologyUsed: [
+                "JSON",
+                "Next.js",
+                "Tailwind",
+                "Typescript",
+            ]
+        },
+        {
+            projectName: "Used Car Ecommerce platform",
+            projectSummary: "Recreation of a public Ecommerce site, Primarily used to learn Next.js with its file based routing, No monetary gain was achieved via this recreation.",
+            projectGithubLink: "https://github.com/Sweattowel/car-page",
+            projectTechnologyUsed: [
+                "Next.js",
+                "Tailwind",
+                "VS",
+            ]
+        },
+        {
+            projectName: "C# RPG",
+            projectSummary: "A Educational Hobby activity in which i design test and play a C# written console RPG, its purpose being to learn and reinforce C# programming and to reinforce the basics of programming",
+            projectGithubLink: "https://github.com/Sweattowel/C--RPG",
+            projectTechnologyUsed: [
+                "C#"
+            ]
+        },
+        {
+            projectName: "Developer Portfolio",
+            projectSummary: "A Fresh portfolio Created and designed by yours truly with an emphasis on colour standards, style and up to date standards. Hosted on Vercel.",
+            projectGithubLink: "https://github.com/Sweattowel/Portfolio",
+            projectTechnologyUsed: [
+                "React.JS",
+                "Nasa Photo API",
+                "Tailwind",
+                "ENV",
+            ]
+        },
+    ]
+    const skills: string[] = [
+        "HTML, CSS JS, TS and C#",
+        "REACT.JS With both JSX and TSX  Axios, Express, MySql, Github, VS And more!",
+        "Api Communication with Axios and Express",
+        "Database handling with MySql using both JS and C# to facilitate queries",
+        "Bcrypt, Multer, Dotnet, Node.JS, JWT, Cors and ENV",
+    ]
+    const considerations: string[] = [
+        "Maintaining standards of OOP for clarity and ease of maintenance",
+        "Dutifully adding comments for ease of access",
+        "Ensuring sanitary API calls",
+        "Clean use of MySql Query commands to ensure safe effective and consistent data",
+        "Encryption of userDetails as well as defining LOA for users",
+    ]
     return (
         <div className="bg-LIGHT  h-full w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
-                <div className="w-[80%] h-[20%] md:ml-[15%] m-auto flex flex-row">
-                    <h1 className="border-b-2 text-[2rem] text-HIGHLIGHT font-bold font-serif w-full md:w-[50%] h-[10vh] text-center justify-center flex items-center">
-                        What im working on
-                    </h1>
-                </div>
-                <div className="flex md:flex-row flex-col w-full h-full justify-evenly">
-
-                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col hover:scale-110 hover:shadow-2xl duration-500">
-                        <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
-                            AlieSohn Pottery
-                        </h1>
-                        <div className="mt-[5%]">
-                            <h2 className="text-HIGHLIGHT font-bold justify-center flex">
-                                Summary
+                <h1 className="text-HIGHLIGHT text-[2rem] font-serif w-[80%] h-[5vh] border-b flex justify-center items-center m-auto">
+                    What im working on
+                </h1>
+                <ul
+                    className="w-[90%] flex flex-row flex-wrap m-auto justify-evenly items-center p-4 border"
+                >
+                    {projects.map((project: ProjectStruc, index: number) => (
+                        <li
+                            key={index}
+                            className="w-[400px] h-[600px] border rounded p-4 m-4 flex flex-col justify-evenly items-center shadow-lg"
+                        >
+                            <h2
+                                className="text-HIGHLIGHT text-[1.2rem] font-serif w-[80%] h-[5vh] border-b flex justify-center items-center"
+                            >
+                                {project.projectName}
                             </h2>
-                            <p className="w-[90%] h-[15vh] h-[10vh] flex m-auto text-center border-b border-HIGHLIGHT">
-                                AlieSohn Pottery is a collaborative E-Commerce Site which leverages React, tailwind and more to create a seamless first come first serve store experience
+                            <p
+                                className="text-center p-4 m-4"
+                            >
+                                {project.projectSummary}
                             </p>
-                        </div>
-                        <button onClick={() => window.open("https://github.com/Sweattowel/AlieSohn-Pottery")} className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
-                            View On Github
-                        </button>
-                    </div>
-
-                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col hover:scale-110 hover:shadow-2xl duration-500">
-                        <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
-                            Spotify-Control
-                        </h1>
-                        <div className="mt-[5%]">
-                            <h2 className="text-HIGHLIGHT font-bold justify-center flex">
-                                Summary
-                            </h2>
-                            <p className="w-[90%] h-[15vh] h-[10vh] flex m-auto text-center border-b border-HIGHLIGHT">
-                                A Seamless API controller for Spotify to control the music in otherwise tense operations
-                            </p>
-                        </div>
-                        <button onClick={() => window.open("https://github.com/Sweattowel/Python_spotify_control")} className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
-                            View On Github
-                        </button>
-                    </div>
-
-                    <div className="shadow-lg md:w-[30%] w-full h-[45vh] flex flex-col hover:scale-110 hover:shadow-2xl duration-500">
-                        <h1 className="text-LIGHT bg-DARK rounded justify-center flex text-[2rem] font-bold font-serif mt-2">
-                            This very page
-                        </h1>
-                        <div className="mt-[5%]">
-                            <h2 className="text-HIGHLIGHT font-bold justify-center flex">
-                                Summary
-                            </h2>
-                            <p className="w-[90%] h-[15vh] h-[10vh] flex m-auto text-center border-b border-HIGHLIGHT">
-                                A Fresh portfolio Created and designed by yours truly with an emphasis on colour standards, style and up to date standards.
-                                <br />
-                                Hosted on Vercel.
-                            </p>
-                        </div>
-                        <button onClick={() => window.open("https://github.com/Sweattowel/Portfolio")} className="ring ring bg-DARK hover:ring-HIGHLIGHT hover:ring-HIGHLIGHT text-LIGHT w-[80%] m-auto">
-                            View On Github
-                        </button>
-                    </div>
-                </div>
-
+                            <button
+                                onClick={() => 
+                                    window.open(project.projectGithubLink)
+                                }
+                                className="border rounded p-2 m-2 text-HIGHLIGHT bg-DARK"
+                            >
+                                Open on github
+                            </button>
+                            <ul
+                                className="h-[20%] p-4 flex flex-wrap justify-center items-center"
+                            >
+                                {project.projectTechnologyUsed.map((tech: string, techIndex: number) => (
+                                    <li
+                                        className="text-[0.8rem]"
+                                    >
+                                        -{tech}-
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                    ))}
+                </ul>
                 <div className="flex md:flex-row flex-col w-[90%] md:h-[60vh] h-[100vh] m-auto">
                     <div className="m-auto h-[45vh] shadow-lg hover:scale-110 hover:shadow-2xl duration-500">
                         <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif h-[10%] w-[80%] m-auto text-center justify-center flex items-center">
                             Technology used
                         </h1>
                         <ul className="md:h-[90%] h-[90%] w-[80%] m-auto text-center justify-center flex flex-col items-center">
-                            <li>
-                                HTML, CSS JS, TS and C#
-                            </li>
-                            <li>
-                                REACT.JS With both JSX and TSX  Axios, Express, MySql, Github, VS And more!
-                            </li>
-                            <li>
-                                Api Communication with Axios and Express
-                            </li>
-                            <li>
-                                Database handling with MySql using both JS and C# to facilitate queries
-                            </li>
-                            <li>
-                                Bcrypt, Multer, Dotnet, Node.JS, JWT, Cors and ENV
-                            </li>
+                            {skills.map((skill: string, index: number) => (
+                                <li
+                                    key={index}
+                                >
+                                    {skill}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className="m-auto h-[45vh] shadow-lg hover:scale-110 hover:shadow-2xl duration-500">
@@ -94,21 +148,13 @@ export default function MyProjects()
                             Considerations
                         </h1>
                         <ul className="md:h-[80%] h-[35vh] w-[80%] m-auto text-center justify-center flex flex-col items-center">
-                            <li>
-                                Maintaining standards of OOP for clarity and ease of maintenance
-                            </li>
-                            <li>
-                                Dutifully adding comments for ease of access
-                            </li>
-                            <li>
-                                Ensuring sanitary API calls
-                            </li>
-                            <li>
-                                Clean use of MySql Query commands to ensure safe effective and consistent data
-                            </li>
-                            <li>
-                                Encryption of userDetails as well as defining LOA for users
-                            </li>
+                            {considerations.map((consideration: string, index: number) => (
+                                <li
+                                    key={index}
+                                >
+                                    {consideration}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>

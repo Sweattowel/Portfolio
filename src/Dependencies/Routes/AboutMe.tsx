@@ -37,6 +37,29 @@ export default function AboutMe()
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNc1xa6WIHBesr3OHp16RhD1Hu0VKsfkLaqogMKK-wA&s",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKh3TBmwA4QWDrifoSZtLl9B1yKA4mtPYjo6Z0xTxp9w&s",
     ]
+
+    const skills: string[][] = [
+        [
+            "Responsive Front end pages",
+            "Knowledge of colour theory and human interaction",
+            "Node.JS && dotnet C# Server programming",
+            "Responsible secure API design",
+            "Class based Programming with strong knowledge of C#",
+            "Persistent growth in safe internet practice"
+        ],
+        [
+            "Open attitude towards feedback and reception of work",
+            "Discussion and open Collaboration with developers and clientelle",
+            "Persistent attitude towards learning and developing all skills",
+            "Open mind towards retreading and improving prior skills",
+        ],
+        [
+            "Strong Basis in HTML, CSS and JS/TS",
+            "Experience with React, React.Next, JSX & TSX, Axios, Express, MySql, Github, VS And more!",
+            "Practiced knowledge of CSS styling using Regular/Tailwind CSS",
+            "Experienced with CyberSecurity standards such as Sanitizing, Encryption, LOA And Real life social security",
+        ]
+    ]
     const NASAADDRESS = process.env.REACT_APP_NASA_API_KEY;
     class handleImage
     {
@@ -47,18 +70,11 @@ export default function AboutMe()
                 
                 const formatDate = currDate[0] + currDate[1] + currDate[2] + currDate[3]
 
-                const cachedData = localStorage.getItem(`nasa-picture-Date:${formatDate}`);
+                const cachedData = sessionStorage.getItem(`nasa-picture-Date:${formatDate}`);
                 if (cachedData) 
                 {
+                    // Reducing the toal amount of API calls to reduce cost and improve user experience
                     setImageData(JSON.parse(cachedData))
-                    // Delete old images from previous visits
-                    for (let i = 0; i < localStorage.length; i++){
-                        const key = localStorage.key(i)
-                        if (!key) continue
-                        if (key && key.slice(0,17) == "nasa-picture-Date" && key !== `nasa-picture-Date:${formatDate}`) {
-                            localStorage.removeItem(key)
-                        }
-                    }
                     return;
                 }
                 const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASAADDRESS}`);
@@ -69,7 +85,7 @@ export default function AboutMe()
                 if (data)
                 {
                     setImageData(data)
-                    localStorage.setItem(`nasa-picture-Date:${formatDate}`, JSON.stringify(data))                    
+                    sessionStorage.setItem(`nasa-picture-Date:${formatDate}`, JSON.stringify(data))                    
                 }
                 else 
                 {
@@ -106,7 +122,7 @@ export default function AboutMe()
                             About me
                         </h1>
                         <p className="flex m-auto w-[80%] text-center md:mb-0 mb-10 md:h-[15vh] h-[30vh]">
-                        An intermediate Web Developer with experience and skills that are reflected in my use of the following; React, JS, TS, C#, Use of libraries such as Tailwind and framer-motion, Front and Back-end design with SQL Database integration, Stakeholder communications, API Writing, Ubuntu Linux DB Hosting and more according to my persistent personal development.
+                            A Web Developer with experience and skills that are reflected in my use of the following; React, JS, TS, C#, Use of libraries such as Tailwind and framer-motion, Front and Back-end design with SQL Database integration, Stakeholder communications, API Writing, Ubuntu Linux DB Hosting and more according to my persistent personal development.
                         </p>
                     </div>
                     <div className="md:w-[80%] w-[90%] flex justify-center m-auto z-0">
@@ -137,7 +153,11 @@ export default function AboutMe()
                             </div>
                          
                         ) : (
-                            <div className="animate-pulse rounded-lg shadow-lg w-[80%] min-h-[10vh] h-[80%] bg-LIGHT"></div>
+                            <div 
+                                className="animate-pulse transition duration-[2000ms] rounded-lg shadow-lg w-[80%] min-h-[10vh] h-[80%] bg-DARK text-LIGHT flex justify-center items-center"
+                            >
+                                LOADING...
+                            </div>
                         )}
 
                     </div>
@@ -152,21 +172,13 @@ export default function AboutMe()
                                 Front-back end Design
                             </h1>
                             <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
-                                <li>
-                                    React.JS Front end pages
-                                </li>
-                                <li>
-                                    Node.JS && dotnet C# Server design
-                                </li>
-                                <li>
-                                    Responsible API design
-                                </li>
-                                <li>
-                                    Class based Programming
-                                </li>
-                                <li>
-                                    Api use, see Nasa image of the day above
-                                </li>
+                                {skills[0].map((skill: string, index: number) => (
+                                    <li
+                                        key={index}
+                                    >
+                                        {skill}
+                                    </li>
+                                ))}
                             </ul>
                         </li>
                         <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
@@ -174,18 +186,13 @@ export default function AboutMe()
                                 Collaboration and improvement
                             </h1>
                             <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
-                                <li>
-                                    Open attitude towards feedback and reception of work
-                                </li>
-                                <li>
-                                    Discussion and open Collaboration with developers and clientelle
-                                </li>
-                                <li>
-                                    Persistent attitude towards learning
-                                </li>
-                                <li>
-                                    Research and developing previously developed skills
-                                </li>
+                                {skills[1].map((skill: string, index: number) => (
+                                    <li
+                                        key={index}
+                                    >
+                                        {skill}
+                                    </li>
+                                ))}
                             </ul>
                         </li>
                         <li className="z-0 bg-WHITE shadow-lg md:h-[80%] h-[30%] w-full md:w-[30%] shadow-inner-lg">
@@ -193,18 +200,13 @@ export default function AboutMe()
                                 Technology
                             </h1>
                             <ul className="flex flex-col h-[25vh] text-center justify-evenly w-[80%] m-auto">
-                                <li>
-                                    Strong Basis in HTML, CSS and JS/TS
-                                </li>
-                                <li>
-                                    Experience with React JSX & TSX, Axios, Express, MySql, Github, VS And more!
-                                </li>
-                                <li>
-                                    Practiced knowledge of CSS styling using Tailwind CSS
-                                </li>
-                                <li>
-                                    Experienced with CyberSecurity standards such as Sanitizing, Encryption, LOA And social engineering
-                                </li>
+                                {skills[2].map((skill: string, index: number) => (
+                                    <li
+                                        key={index}
+                                    >
+                                        {skill}
+                                    </li>
+                                ))}
                             </ul>
                         </li>
                     </ul>
