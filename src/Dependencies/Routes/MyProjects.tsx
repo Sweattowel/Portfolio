@@ -86,7 +86,7 @@ export default function MyProjects()
         <div className="bg-LIGHT  h-full w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
                 <h1 className="text-HIGHLIGHT text-[2rem] font-serif w-[80%] h-[5vh] border-b flex justify-center items-center m-auto">
-                    What im working on
+                    Projects
                 </h1>
                 <ul
                     className="w-[90%] flex flex-row flex-wrap m-auto justify-evenly items-center p-4 border"
@@ -94,7 +94,7 @@ export default function MyProjects()
                     {projects.map((project: ProjectStruc, index: number) => (
                         <li
                             key={index}
-                            className="w-[400px] h-[600px] border rounded p-4 m-4 flex flex-col justify-evenly items-center shadow-lg"
+                            className="w-[400px] h-[600px] border rounded p-4 m-4 flex flex-col justify-evenly items-center shadow-lg hover:shadow-2xl hover:scale-110 transition ease-in-out duration-500"
                         >
                             <h2
                                 className="text-HIGHLIGHT text-[1.2rem] font-serif w-[80%] h-[5vh] border-b flex justify-center items-center"

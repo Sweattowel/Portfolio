@@ -165,7 +165,7 @@ export default function AboutMe()
                     </div>
                 </div>
                 <h1 className="z-0 flex m-auto mb-5 w-[80%] text-center justify-center text-HIGHLIGHT font-serif text-[3rem] border-b">
-                    My Experiences
+                    Experience
                 </h1>
                 <div className="z-0 md:h-[50vh] h-[100vh] justify-evenly flex flex-col">
                     <ul className="flex md:flex-row flex-col w-full h-full justify-evenly">
