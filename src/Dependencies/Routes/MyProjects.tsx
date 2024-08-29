@@ -39,6 +39,17 @@ export default function MyProjects()
             ]
         },
         {
+            projectName: "Research and development",
+            projectSummary: "A multitude of basic projects and components that seek to explore and create based on new concepts, this includes but does not limit itself to, 2D Engine rendering, 3D engine rendering, API experimentation, New and experimental design choices! Please visit github to find out more",
+            projectGithubLink: "https://github.com/Sweattowel/3dEngineAndOtherExperiments",
+            projectTechnologyUsed: [
+                "2D rotation and movement using Math",
+                "4D matrix rotation handling X, Y, Z and W adjustment in a 3D environment",
+                "Full Coordinate to Screen pipeline",
+                "Controlling data through components",
+            ]
+        },
+        {
             projectName: "Used Car Ecommerce platform",
             projectSummary: "Recreation of a public Ecommerce site, Primarily used to learn Next.js with its file based routing, No monetary gain was achieved via this recreation.",
             projectGithubLink: "https://github.com/Sweattowel/car-page",
@@ -50,7 +61,7 @@ export default function MyProjects()
         },
         {
             projectName: "C# RPG",
-            projectSummary: "A Educational Hobby activity in which i design test and play a C# written console RPG, its purpose being to learn and reinforce C# programming and to reinforce the basics of programming",
+            projectSummary: "A Educational Hobby activity in which i design and playest a C# written console RPG, its purpose being to learn and reinforce C# programming and to reinforce the basics of programming",
             projectGithubLink: "https://github.com/Sweattowel/C--RPG",
             projectTechnologyUsed: [
                 "C#"
@@ -85,7 +96,7 @@ export default function MyProjects()
     return (
         <div className="bg-LIGHT  h-full w-full">
             <div className="bg-WHITE h-full w-[90%] flex flex-col m-auto shadow-lg">
-                <h1 className="text-HIGHLIGHT text-[2rem] font-serif w-[80%] h-[5vh] border-b flex justify-center items-center m-auto">
+                <h1 className="text-HIGHLIGHT text-[2rem] font-serif w-[80%] h-[5vh] flex justify-center items-center m-auto">
                     Projects
                 </h1>
                 <ul
@@ -119,7 +130,7 @@ export default function MyProjects()
                             >
                                 {project.projectTechnologyUsed.map((tech: string, techIndex: number) => (
                                     <li
-                                        className="text-[0.8rem]"
+                                        className="text-[0.8rem] text-center"
                                     >
                                         -{tech}-
                                     </li>
@@ -147,7 +158,7 @@ export default function MyProjects()
                         <h1 className="mt-2 border-b-2 md:text-[2rem] text-[1rem] text-HIGHLIGHT font-bold font-serif w-[80%] m-auto text-center justify-center flex items-center">
                             Considerations
                         </h1>
-                        <ul className="md:h-[80%] h-[35vh] w-[80%] m-auto text-center justify-center flex flex-col items-center">
+                        <ul className="md:h-[80%] h-[35vh] w-[80%] m-auto text-center justify-center flex flex-col items-center text-center">
                             {considerations.map((consideration: string, index: number) => (
                                 <li
                                     key={index}
