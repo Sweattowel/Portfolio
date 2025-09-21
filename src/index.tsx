@@ -1,30 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Opener from './Dependencies/Opener';
 import './index.css'
-import Nav from './Dependencies/Nav/Nav';
-import MobileNav from './Dependencies/Nav/MobileNav';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AboutMe from './Dependencies/Routes/AboutMe';
-import MyProjects from './Dependencies/Routes/MyProjects';
+import Home from './Dependencies/Routes/Home';
+import { PageResourceType } from './Dependencies/Models';
+import Head from './Dependencies/Global/Head';
+import Tail from './Dependencies/Global/Tail';
+import Projects from './Dependencies/Routes/Projects';
 import Contact from './Dependencies/Routes/Contact';
 
+let PageResource : PageResourceType[] = 
+[
+  {
+    Name: "Home",
+    Link: "/",
+    Component: Home    
+  },
+  {
+    Name: "Projects",
+    Link: "/ProjectDisplay",
+    Component: Projects    
+  },
+  {
+    Name: "Contact me",
+    Link: "/Contact",
+    Component: Contact    
+  },
+];
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
+
 root.render(
   <React.StrictMode>
-    <Opener />
     <Router>
-      {window.innerWidth > 768 ?
-        <Nav />
-        :
-        <MobileNav />
-      }
+      <Head PageResource={PageResource}/>
       <Routes>
-        <Route path='/' Component={AboutMe} />
-        <Route path='/MyProjects' Component={MyProjects} />
-        <Route path='/Contact' Component={Contact} />
+        {PageResource.map((Page, index) => (
+          <Route path={Page.Link} Component={Page.Component} key={index}/>
+        ))}
       </Routes>
     </Router>
+    <Tail />
   </React.StrictMode>
 );
