@@ -1,4 +1,6 @@
 import React from "react"
+import { meDataType, meExprType } from "../Models";
+import ExperienceCard from "../Parts/ExperienceCard";
 
 export default function Home()
 {
@@ -71,7 +73,7 @@ export default function Home()
                     className={`m-2 p-2 list-none ${index % 2 === 0 ? "text-left" : "text-right"}`}
                 >
                     <h2 
-                        className="font-bold text-xl border-b"
+                        className="font-bold text-xl border-b pl-1 pr-1"
                     >
                         {data.Title}
                     </h2>
@@ -88,34 +90,13 @@ export default function Home()
                 </h2>
                 <ul>
                     {PortfolioUserExpr.map((Expr: meExprType, index: number) => (
-                        <li
+                        <ExperienceCard 
                             key={index}
-                            className="flex flex-col justify-center items-center text-center m-2 p-2"
-                        >
-                            <h2
-                                className="w-full text-WHITE p-2 m-2 bg-HIGHLIGHT"
-                            >
-                                {Expr.Title} | {Expr.DateStart.slice(0,10)} To {Expr.DateEnd.slice(0,10)}
-                            </h2>
-                            <p>
-                                {Expr.Desc}
-                            </p>
-
-                        </li>
+                            Expr={Expr}
+                        />
                     ))}
                 </ul>
             </section>
         </main>
     )
-}
-type meDataType = {
-    Title: string,
-    Desc: string | string[]
-}
-type meExprType = {
-    Title: string,
-    Desc: string,
-    Highlights: string[],
-    DateStart: string,
-    DateEnd: string
 }

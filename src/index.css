@@ -5,7 +5,7 @@
 * {
     background-color: rgb(240,240,240);
 }
-:not(li, h2, h3) {
+:not(h2, h3) {
     background-color: rgb(255, 255, 255);
 }
 

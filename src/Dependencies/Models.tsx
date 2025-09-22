@@ -16,3 +16,25 @@ export interface ProjectToolsType
     ToolName: string,
     ToolUse: string
 }
+export interface meDataType  
+{
+    Title: string,
+    Desc: string | string[]
+}
+export interface meExprType  
+{
+    Title: string,
+    Desc: string,
+    Highlights: string[],
+    DateStart: string,
+    DateEnd: string
+}
+// IMPORT VARIABLES
+export interface ProjectPropsType
+{
+    projectProps: ProjectDisplayType
+};
+export interface ExprCardPropsType
+{
+    Expr: meExprType
+};
