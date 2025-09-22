@@ -10,11 +10,11 @@ export default function Head({ PageResource } : NavProps)
 {
     return (
         <main 
-            className="h-[12vh] flex flex-col border-b"
+            className="h-full flex flex-col border-b"
         >
-            <div className="h-[10vh] flex flex-row items-center">
+            <div className="h-full flex flex-row items-center">
                 <img 
-                    className="h-[10vh] w-[10vh] rounded-[50%]  max-h-[100%] border"
+                    className="h-[10vh] w-[10vh] rounded-[50%]  max-h-[100%] border m-1"
                     src="https://pbs.twimg.com/profile_images/1020966446208364545/KIVK7DtL_400x400.jpg" alt="UserImage"
                 />
                 <h1
@@ -43,7 +43,7 @@ function NavLink({PageResource} : NavProp){
     return (
         <Link 
             to={PageResource.Link}
-            className="w-full hover:bg-BLACK hover:text-WHITE text-center"
+            className="w-full hover:bg-BLACK hover:text-WHITE bg-WHITE text-center"
         >
             {PageResource.Name}
         </Link>

@@ -1,3 +1,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+* {
+    background-color: rgb(240,240,240);
+}
+:not(li, h2, h3) {
+    background-color: rgb(255, 255, 255);
+}
+

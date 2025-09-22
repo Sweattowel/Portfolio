@@ -62,23 +62,23 @@ export default function Home()
 
     return (
         <main
-            className="flex flex-col m-2 p-2 divide-y"
+            className="flex flex-col m-2 p-2"
         >   
 
             {PortfolioUserData.map((data: meDataType ,index: number) => (
-                <section
+                <li
                     key={index}
-                    className={index % 2 === 0 ? "text-left" : "text-right"}
+                    className={`m-2 p-2 list-none ${index % 2 === 0 ? "text-left" : "text-right"}`}
                 >
                     <h2 
-                        className="font-bold text-xl"
+                        className="font-bold text-xl border-b"
                     >
                         {data.Title}
                     </h2>
                     <p>
                         {data.Desc}
                     </p>
-                </section>
+                </li>
             ))}
             <section>
                 <h2
