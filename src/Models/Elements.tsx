@@ -40,6 +40,7 @@ export type ProjectType =
     DocumentConsiderations: string[],
     DocumentChallenges: string[],
     DocumentThoughtProcess: string[],
+    DocumentProjectLink: string,
 };
 
 // Page Variable imports

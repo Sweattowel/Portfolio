@@ -76,6 +76,11 @@ export default function ProjectDocument()
                     </li>
                 ))}
             </ul>
+            <button
+                className="interactable"
+            >
+                {ProjectData.DocumentProjectLink}
+            </button>
         </main>
     )
 };

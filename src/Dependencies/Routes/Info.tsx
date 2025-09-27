@@ -23,7 +23,9 @@ export default function Info()
             </h1>
             <ul>
                 {CreatorExperience.map((Expr: ExperienceType, index: number) => (
-                    <li>
+                    <li
+                        key={index}
+                    >
                         <h2
                             className="highlight mb-2"
                         >
@@ -44,7 +46,7 @@ export default function Info()
                 {Projects.map((Project: ProjectType, index: number) => (
                     <li
                         key={index}
-                        className="min-h-[20vh] w-full flex flex-col justify-evenly border mb-2 pl-2 pr-2"
+                        className="h-full w-full flex flex-col justify-evenly border mb-2 pl-2 pr-2"
                     >
                         <h2
                             className="highlight mb-2"
@@ -52,7 +54,7 @@ export default function Info()
                             {Project.Title}
                         </h2>
                         <p
-                            className="pt-2"
+                            className="pt-2 w-full"
                         >
                             {Project.Desc}
                         </p>
