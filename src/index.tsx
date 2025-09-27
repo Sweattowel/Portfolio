@@ -2,44 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './Dependencies/Routes/Home';
-import { PageResourceType } from './Dependencies/Models';
+
+// Component Imports
+
 import Head from './Dependencies/Global/Head';
 import Tail from './Dependencies/Global/Tail';
-import Projects from './Dependencies/Routes/Projects';
-import Contact from './Dependencies/Routes/Contact';
+import ProjectDocument from './Dependencies/Routes/ProjectDocument';
+import { PageResources, Projects } from './Dependencies/Data/Resources';
 
-let PageResource : PageResourceType[] = 
-[
-  {
-    Name: "Home",
-    Link: "/",
-    Component: Home    
-  },
-  {
-    Name: "Projects",
-    Link: "/ProjectDisplay",
-    Component: Projects    
-  },
-  {
-    Name: "Contact me",
-    Link: "/Contact",
-    Component: Contact    
-  },
-];
+// Model Imports
+
+import { PageResourceType, ProjectType } from './Models/Elements';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 root.render(
   <React.StrictMode>
     <Router>
-      <Head PageResource={PageResource}/>
+      <Head />
       <Routes>
-        {PageResource.map((Page, index) => (
-          <Route path={Page.Link} Component={Page.Component} key={index}/>
+        {PageResources.map((PageResource : PageResourceType, index : number) => (
+          <Route path={PageResource.Path} Component={PageResource.component} key={index}/>
+        ))}
+        {Projects.map((Project: ProjectType, index: number) => (
+          <Route path={Project.Path} Component={ProjectDocument} key={index} />
         ))}
       </Routes>
+      <Tail />
     </Router>
-    <Tail />
   </React.StrictMode>
 );

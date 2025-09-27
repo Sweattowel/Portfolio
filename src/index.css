@@ -2,10 +2,36 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-* {
-    background-color: rgb(240,240,240);
-}
-:not(h2, h3) {
-    background-color: rgb(255, 255, 255);
+/* global CSS */
+
+.interactable {
+    background-color: #f8b1efff;
+    padding: 2px 5px 2px 5px;
+    margin: 2px 5px 2px 5px;
 }
 
+.interactable:hover {
+    background-color: #f394e6ff;
+    border-bottom: 1px solid black;
+}
+
+.highlight {
+    color: #a84545ff;
+    font-weight: bold;
+}
+
+/* Consistent Route styling */
+
+.RoutePage {
+    min-height: 80vh;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2;
+    margin-bottom: 2;
+    padding: 4px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}

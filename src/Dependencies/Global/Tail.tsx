@@ -1,27 +1,46 @@
 import React from "react";
+import { PageResources, Projects } from "../Data/Resources";
+import { PageResourceType, ProjectType } from "../../Models/Elements";
+import { NavLink } from "react-router-dom";
 
 export default function Tail()
 {
+
     return (
-        <main
-            className="h-[70vh] max-w-full flex flex-row justify-evenly items-center m-2 p-2 border-t "
+        <section
+            className="RoutePage flex flex-row justify-space-between"
         >
-            <section
-                className="divide-y"
+            <ul
+                className="w-full flex flex-col p-2 justify-center max-h-[50vh]"
             >
-                <p>Here</p>
-                <p>Here</p>
-                <p>Here</p>
-                <p>Here</p>
-            </section>
-            <section
-                className="divide-y"
+                {PageResources.map((PageResource: PageResourceType, index: number) => (
+                    <NavLink 
+                        to={PageResource.Path} 
+                        about={PageResource.Desc} 
+                        key={index}
+                        className="p-1 m-1 hover:border-black border-b border-white text-sm"
+                        aria-label={`BottomNav - ${PageResource.Desc}`}
+                    >
+                        {PageResource.Title}
+                    </NavLink>
+                ))}
+                {Projects.map((Project: ProjectType, index: number) => (
+                    <NavLink 
+                        to={Project.Path} 
+                        about={Project.Desc} 
+                        key={index}
+                        className="p-1 m-1 hover:border-black border-b border-white text-sm"
+                        aria-label={`BottomNav - ${Project.Desc}`}
+                    >
+                        {Project.Title}
+                    </NavLink>
+                ))}
+            </ul>
+            <p
+                className="w-full flex justify-center items-center max-h-[50vh]"
             >
-                <p>Here</p>
-                <p>Here</p>
-                <p>Here</p>
-                <p>Here</p>
-            </section>
-        </main>
+                Portfolio is a copyrighted project
+            </p>
+        </section>
     )
-}
+};

@@ -1,51 +1,39 @@
 import React from "react";
-import { PageResourceType } from "../Models";
-import { Link } from "react-router-dom";
 
-type NavProps = {
-    PageResource : PageResourceType[];
-}
+// Model Imports
 
-export default function Head({ PageResource } : NavProps)
+import { PageResources } from "../Data/Resources";
+import { PageResourceType } from "../../Models/Elements";
+import { NavLink } from "react-router-dom";
+
+export default function Head()
 {
-    return (
-        <main 
-            className="h-full flex flex-col border-b"
-        >
-            <div className="h-full flex flex-row items-center">
-                <img 
-                    className="h-[10vh] w-[10vh] rounded-[50%]  max-h-[100%] border m-1"
-                    src="https://pbs.twimg.com/profile_images/1020966446208364545/KIVK7DtL_400x400.jpg" alt="UserImage"
-                />
-                <h1
-                    className="w-full text-center font-bold text-2xl"
-                >
-                    SweatTowel Portfolio
-                </h1>
-            </div>
 
-            <ul
-                className="h-[2vh] w-[50%] text-xs flex flex-row justify-evenly relative bottom-[0] divide-x"
+    return (
+        <section
+            className="w-[90vw] flex flex-col justify-evenly p-1 m-auto mb-1 border-b"
+        >
+            <h1
+                className="m-2 p-2 text-2xl font-bold highlight"
             >
-                {PageResource.map((Page: PageResourceType, index: number) => (
-                    <NavLink PageResource={Page} key={index}/>
+                Thoams Portfolio
+            </h1>
+            <ul
+                className=""
+            >
+                {PageResources.map((PageResource : PageResourceType, index : number) => (
+                    <NavLink  
+                        draggable 
+                        to={PageResource.Path} 
+                        about={PageResource.Desc} 
+                        key={index}
+                        className="interactable"
+                        aria-label={PageResource.Desc}
+                    >
+                        {PageResource.Title}
+                    </NavLink>
                 ))}
             </ul>
-        </main>
+        </section>
     )
-}
-
-type NavProp = {
-    PageResource : PageResourceType;
-}
-
-function NavLink({PageResource} : NavProp){
-    return (
-        <Link 
-            to={PageResource.Link}
-            className="w-full hover:bg-BLACK hover:text-WHITE bg-WHITE text-center"
-        >
-            {PageResource.Name}
-        </Link>
-    )
-}
+};

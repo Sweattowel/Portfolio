@@ -3,12 +3,14 @@ import React from "react";
 export default function Contact()
 {
     return (
-        <main>
+        <section
+            className="RoutePage"
+        >
             <h1
-                className="font-bold text-2xl text-center p-2 m-2"
+                className="highlight"
             >
-                Do not solicit from nor sell data from me
+                Contact
             </h1>
-        </main>
+        </section>
     )
 }
