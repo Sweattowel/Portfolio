@@ -4,10 +4,18 @@
 
 /* global CSS */
 
+body {
+   /* background-color: rgb(160, 32, 240); */
+    background-color: black;
+    color: rgb(120, 120, 120);
+}
+
 .interactable {
     background-color: #f8b1efff;
+    color: black;
     padding: 2px 5px 2px 5px;
     margin: 2px 5px 2px 5px;
+    border-bottom: 1px solid grey;
 }
 
 .interactable:hover {
@@ -16,7 +24,7 @@
 }
 
 .highlight {
-    color: #a84545ff;
+    color: rgb(255, 215, 0);
     font-weight: bold;
 }
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { ProjectType } from "../../Models/Elements";
 import { Projects } from "../Data/Resources";
 import Error from "../Global/Error";
@@ -20,6 +20,13 @@ export default function ProjectDocument()
         <main
             className="RoutePage border-t"
         >
+            <NavLink 
+                to={'/Information'}
+                className="interactable "
+            >
+                &#8630; Back
+            </NavLink>
+                
             <h1
                 className="highlight text-xl"
             >
