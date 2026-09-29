@@ -29,7 +29,7 @@ export const ProjectData: projStruc[] = [
             "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
         ],
         publicAccess: true,
-        publicAccessLink: "https://vercel.com/sweattowels-projects"
+        publicAccessLink: "https://thomas-moloney-portfolio.vercel.app/"
     },
     {
         ID: 1,
