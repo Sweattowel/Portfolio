@@ -1,7 +1,6 @@
 'use client'
 
 import LeftBar from "@/app/Global/LeftBar";
-import { error } from "console";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
