@@ -17,7 +17,7 @@ export default function Home() {
             About me
           </h1>
           <p
-            className="border text-center"
+            className="text-center"
           >
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           </p>
@@ -31,7 +31,7 @@ export default function Home() {
             My experience
           </h1>
           <p
-            className="border text-center"
+            className="text-center"
           >
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           </p>
@@ -45,17 +45,23 @@ export default function Home() {
             Contact
           </h1>
           <p
-            className="border text-center"
+            className="text-center"
           >
             Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
           </p>
         </div>
-        <p
-          className="text-sm"
+        <div
+          className="text-sm w-[25%] text-center"
         >
-        <p>&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;</p>
-           Find my socials just here
+        <p>
+          &#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;&#8592;
         </p>
+        <p
+          className=" border rounded-full"
+        >
+          Find my socials just here
+        </p>
+        </div>
       </section>
     </main>
   );
