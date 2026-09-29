@@ -36,6 +36,24 @@ export default function LeftBar()
             Link:"https://github.com/Sweattowel"
         },
     ];
+    const projectList = [
+        {
+            imgSource: "",
+            text: ""
+        },
+        {
+            imgSource: "",
+            text: ""
+        },
+        {
+            imgSource: "",
+            text: ""
+        },
+        {
+            imgSource: "",
+            text: ""
+        },
+    ];
     return (
         <div
             className="flex flex-col w-[20%] h-[100vh] fixed p-2 text-center border-r border-white item-center justify-between"
@@ -52,7 +70,16 @@ export default function LeftBar()
                 Leftbar
             </p>
             <ul>
+                {projectList.map((proj, index:number) => (
+                    <li key={index}
 
+                    >
+                        <img src={proj.imgSource} alt="ProjectPicture" />
+                        <p>
+                            {proj.text}
+                        </p>
+                    </li>
+                ))}
             </ul>
             <ul className="grid grid-cols-4">
                 {socialMedia.map((sm, index: number) => (
