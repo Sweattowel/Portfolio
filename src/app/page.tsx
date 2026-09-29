@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LeftBar from "./Global/LeftBar";
 
 export default function Home() {
@@ -6,7 +5,7 @@ export default function Home() {
     <main>
       <LeftBar />
       <section
-        className="ml-[20%] h-[100vh] p-2 flex flex-col justify-between"
+        className="md:ml-[15%] ml-[25%] h-[100vh] p-2 flex flex-col justify-between"
       >
         <div
           className="flex flex-col justify-evenly h-[30%] p-2"
