@@ -1,8 +1,8 @@
 'use client'
 
 import LeftBar from "@/app/Global/LeftBar";
+import { error } from "console";
 import { useSearchParams } from "next/navigation";
-import { setegid } from "process";
 import { useEffect, useState } from "react";
 
 const errorList = [
@@ -10,6 +10,10 @@ const errorList = [
         error: "NoSource",
         errorMessage: "No source available for this page"
     },
+    {
+        error: "Default",
+        errorMessage: "test"
+    }
 ]
 
 export default function Error()
