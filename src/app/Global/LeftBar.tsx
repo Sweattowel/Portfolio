@@ -25,10 +25,10 @@ export default function LeftBar()
 
     return (
         <div
-            className="flex flex-col md:w-[15%] w-[25%] h-[100vh] fixed p-2 text-center border-r border-white item-center justify-between"
+            className="flex flex-col md:w-[15%] w-[25%] h-[100vh] fixed text-center border-r border-white item-center justify-between"
         >
             <Link 
-                className="flex flex-col justify-evenly h-[20%] hover:opacity-70"
+                className="flex flex-col justify-evenly h-[20%] hover:opacity-70 m-2"
                 href={"/"}
             >
                 <img className="rounded-full max-h-full" 
@@ -39,22 +39,22 @@ export default function LeftBar()
                 </h1>
             </Link>
             <div
-                className="h-[70%]"
+                className="h-[70%] m-2 mr-0 "
             >   
                 <h2 className="h-[10%]">
                     Projects
                 </h2>
-                <ul className="h-[90%] divide-y">
+                <ul className="h-[90%] w-full divide-y">
                     {ProjectData.map((proj: projStruc, index:number) => (
                         <Link key={index}
-                            className="flex flex-row justify-evenly items-center p-2 hover:opacity-100 opacity-50"
+                            className="pr-2 borderw-full flex flex-row justify-evenly items-center p-2 hover:opacity-100 opacity-50"
                             href={proj.projName ? `/Pages/Project?ProjNam=${proj.projName}` : `/Pages/Error?Error=NoSource`}
                             >
                             <img src={proj.imgSource || "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Fugly-rat-pictures-htkgui2lbr935i8r.jpg&f=1&nofb=1&ipt=d9edfb324d9b15db538bc54e0032709406d9a115aba4abf1a7a93cec4d046f37&ipo=images"} alt="ProjectPicture" 
                                 className="w-[25%] rounded-full"
                             />
                             <p 
-                                className="w-full"
+                                className="w-full text-[90%]"
                                 >
                                 {proj.projName || "Lorem ipsum"}
                             </p>
