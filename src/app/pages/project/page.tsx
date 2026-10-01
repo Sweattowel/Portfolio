@@ -5,6 +5,7 @@ import LeftBar from "@/app/Global/LeftBar";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import Error from "../error/page";
 
 export default function Test()
 {
@@ -24,12 +25,7 @@ export default function Test()
     if (!project)
     {
         return (
-            <main>
-                <LeftBar />
-                <section className="md:ml-[15%] ml-[25%] p-2">
-                    Waiting for data...
-                </section>
-            </main>
+            <Error />
         )
     }
 
