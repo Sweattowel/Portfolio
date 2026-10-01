@@ -48,7 +48,7 @@ export default function LeftBar()
                     {ProjectData.map((proj: projStruc, index:number) => (
                         <Link key={index}
                             className="pr-2 borderw-full flex flex-row justify-evenly items-center p-2 hover:opacity-100 opacity-50"
-                            href={proj.projName ? `/Pages/Project?ProjNam=${proj.projName}` : `/Pages/Error?Error=NoSource`}
+                            href={proj.projName ? `/pages/project?ProjNam=${proj.projName}` : `/Pages/Error?Error=NoSource`}
                             >
                             <img src={proj.imgSource || "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Fugly-rat-pictures-htkgui2lbr935i8r.jpg&f=1&nofb=1&ipt=d9edfb324d9b15db538bc54e0032709406d9a115aba4abf1a7a93cec4d046f37&ipo=images"} alt="ProjectPicture" 
                                 className="w-[25%] rounded-full"

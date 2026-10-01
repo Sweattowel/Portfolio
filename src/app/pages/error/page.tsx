@@ -2,7 +2,7 @@
 
 import LeftBar from "@/app/Global/LeftBar";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const errorList = [
     {
@@ -15,7 +15,7 @@ const errorList = [
     }
 ]
 
-export default function Error()
+function Cancer()
 {
 
     const searchParams = useSearchParams();
@@ -41,9 +41,17 @@ export default function Error()
                     Error...
                 </h1>
                 <p>
-                    {error}
+                    {error ? error : "Failed to collect error"}
                 </p>
             </section>
         </main>
+    )
+}
+export default function Error()
+{
+    return (
+        <Suspense>
+            <Cancer />
+        </Suspense>
     )
 }
