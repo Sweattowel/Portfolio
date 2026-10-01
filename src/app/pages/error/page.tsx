@@ -15,7 +15,7 @@ const errorList = [
     }
 ]
 
-function Cancer()
+function ErrorContent()
 {
 
     const searchParams = useSearchParams();
@@ -31,7 +31,7 @@ function Cancer()
         } else {
             setError("Unspecified error")
         }
-    },[])
+    },[searchParams])
 
     return (
         <main>
@@ -47,11 +47,12 @@ function Cancer()
         </main>
     )
 }
+
 export default function Error()
 {
     return (
-        <Suspense>
-            <Cancer />
+        <Suspense fallback={<p>Loading...</p>}>
+            <ErrorContent />
         </Suspense>
     )
 }
