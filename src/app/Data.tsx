@@ -18,7 +18,7 @@ export const ProjectData: projStruc[] = [
         projName: "PortFolio",
         repoLink: "https://github.com/Sweattowel/Portfolio",
         techUsed: [
-            "Vercel", "Typescript", "Next.js"
+            "Vercel", "Typescript", "Next.js", "Vercel"
         ],
         descShort: "Custom portfolio to display skills to potential employers",
         descLong: [
