@@ -11,7 +11,7 @@ const errorList = [
     },
     {
         error: "Default",
-        errorMessage: "test"
+        errorMessage: "No error"
     }
 ]
 
@@ -29,20 +29,23 @@ function ErrorContent()
         if (foundError) {
             setError(foundError)
         } else {
-            setError("Unspecified error")
+            setError("Unspecified error - page does not exist")
         }
     },[searchParams])
 
     return (
         <main>
             <LeftBar />
-            <section className="md:ml-[15%] ml-[25%] p-2">
-                <h1>
+            <section className="md:ml-[15%] ml-[25%] p-2 h-full">
+                <h1 className="text-2xl border-b">
                     Error...
                 </h1>
-                <p>
+                <p className="mt-2 mb-2">
                     {error ? error : "Failed to collect error"}
                 </p>
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.tenor.com%2FZID94nHYqCYAAAAC%2Fsad-rat-crying-rat.gif&f=1&nofb=1&ipt=9dabf049c2e3b5ae11f8b910455f0a0701626293a875c47cfec29057985599cf&ipo=images" alt="Sad Rat" 
+                    className="rounded-full m-auto h-full w-full m-2"
+                />
             </section>
         </main>
     )
