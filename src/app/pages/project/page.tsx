@@ -32,12 +32,12 @@ export default function Test()
     return (
         <main>
             <LeftBar />
-            <section className="md:ml-[15%] ml-[25%] p-2">
+            <section className="md:ml-[15vw] ml-[25vw] p-2">
                 <div
                     className="h-[10vh] flex flex-col justify-evenly border-b pb-2"
                 >
                     <h1
-                        className="text-2xl"
+                        className="text-5xl"
                     >
                         {project?.projName}
                     </h1>
@@ -50,24 +50,28 @@ export default function Test()
                 <section 
                     className="h-[80vh] flex flex-col justify-between"
                 >
-                    <ul className="h-full flex flex-col text-center divide-y">
-                        {project.descLong.map((d: string, index: number) => (
-                            <li key={index}
-                                className="h-full p-2 mt-2 mb-2"
-                            >
-                                {d}
-                            </li>
-                        ))}
-                    </ul>
-                    <ul className="flex flex-row justify-evenly items-center">
-                        {project.techUsed.map((t: string, index: number) => (
-                            <li key={index}
-                            
-                            >
-                                {t}
-                            </li>
-                        ))}
-                    </ul>
+                    <div
+                        className="h-full max-w-full border flex md:flex-col flex-row"
+                    >
+                        <ul className="md:w-full w-[80%] h-[100%] flex flex-col text-center md:divide-y md:border-none border-r">
+                            {project.descLong.map((d: string, index: number) => (
+                                <li key={index}
+                                className="h-full p-2 m-2"
+                                >
+                                    {d}
+                                </li>
+                            ))}
+                        </ul>
+                        <ul className="md:w-full w-[20%] h-[100%] text-center flex md:flex-row flex-col justify-evenly items-center">
+                            {project.techUsed.map((t: string, index: number) => (
+                                <li key={index}
+                                    
+                                >
+                                    {t}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                     <div
                         className="h-[10vh] flex flex-row justify-evenly items-center"
                     >

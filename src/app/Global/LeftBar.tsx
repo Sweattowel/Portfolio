@@ -25,7 +25,7 @@ export default function LeftBar()
 
     return (
         <div
-            className="flex flex-col md:w-[15%] w-[25%] h-[100vh] fixed text-center border-r border-white item-center justify-between"
+            className="bg-black flex flex-col md:w-[15vw] w-[25vw] h-[100vh] fixed text-center border-r border-white item-center justify-between"
         >
             <Link 
                 className="flex flex-col justify-evenly h-[20%] hover:opacity-70 m-2"
@@ -42,7 +42,7 @@ export default function LeftBar()
                 className="h-[70%] m-2 mr-0 "
             >   
                 <h2 className="h-[10%]">
-                    Projects
+                    Projects & Skills
                 </h2>
                 <ul className="h-[90%] w-full divide-y">
                     {ProjectData.map((proj: projStruc, index:number) => (
@@ -51,7 +51,7 @@ export default function LeftBar()
                             href={proj.projName ? `/pages/project?ProjNam=${proj.projName}` : `/Pages/Error?Error=NoSource`}
                             >
                             <img src={proj.imgSource || "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapers.com%2Fimages%2Fhd%2Fugly-rat-pictures-htkgui2lbr935i8r.jpg&f=1&nofb=1&ipt=d9edfb324d9b15db538bc54e0032709406d9a115aba4abf1a7a93cec4d046f37&ipo=images"} alt="ProjectPicture" 
-                                className="w-[25%] rounded-full"
+                                className="md:visible sd:hidden w-[25%] rounded-full"
                             />
                             <p 
                                 className="w-full text-[90%]"
