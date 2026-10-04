@@ -18,7 +18,7 @@ export default function Home() {
           <p
             className="text-center"
           >
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+            Hey! im a developer with a passion for all things computing, i started using computers at 8 years old and since then ive been hooked on the concept. ive had myself learn Programming in many languages, best practices, Cybersecurity, Networking, hardware and more! <br /> Please enjoy this display of my skills 
           </p>
         </div>
         <div
@@ -32,7 +32,7 @@ export default function Home() {
           <p
             className="text-center"
           >
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+            My experience with computing hasnt always been positive, ive had my fair share of lessons, from breaking my own parts, to getting my accounts stolen ive made my mistakes, though ive made a point of making those mistakes only once  
           </p>
         </div>
         <div
@@ -46,7 +46,7 @@ export default function Home() {
           <p
             className="text-center"
           >
-            Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
+            Contacting me is pretty easy!, try using one of the social media links at the left bar on the bottom left
           </p>
         </div>
         <div

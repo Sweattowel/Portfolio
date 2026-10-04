@@ -62,7 +62,7 @@ export default function LeftBar()
                     ))}
                 </ul>
             </div>
-            <ul className="flex flex-row max-h-[10%]">
+            <ul className="flex flex-row max-h-[20%] bg-[#0a0a0a] border-t ">
                 {socialMedia.map((sm, index: number) => (
                     <Link
                         className="flex hover:opacity-100 opacity-50"
